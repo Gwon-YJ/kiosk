@@ -22,6 +22,7 @@ public class Kiosk {
             for (int i = 0; i < menus.size(); i++) {
                 System.out.println((i + 1) + ". " + menus.get(i).getMenuName());
             }
+
             System.out.println("0. 종료");
 
             System.out.print("메뉴 번호를 선택: ");
@@ -40,20 +41,20 @@ public class Kiosk {
                 System.out.println("잘못된 번호입니다. 다시 입력해주세요");
             }
         }
-
         scanner.close();
     }
 
     public void back(Menu menu) {
 
         while (true) {
-            System.out.println("[ MAIN MENU ]");
+            System.out.println("[ " + menu.getmenuBar() + " ]");
 
             for (int i = 0; i < menu.getItems().size(); i++) {
                 MenuItem item = menu.getItems().get(i);
                 System.out.printf("%d. %-15s | W %-2.1f | %s\n",
                         i + 1, item.getName(), item.getPrice(), item.getExplanation());
             }
+
             System.out.println("0. 뒤로 가기");
 
             System.out.print("메뉴 번호 선택: ");
