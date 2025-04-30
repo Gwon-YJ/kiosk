@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+    // 1. 속성
 
+    // 2. 생성자
+
+    // 3. 기능
     public static void main(String[] args) {
 
         List<MenuItem> burgers = new ArrayList<>();
