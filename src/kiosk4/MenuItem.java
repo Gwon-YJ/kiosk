@@ -1,7 +1,6 @@
 package kiosk4;
 
 public class MenuItem {
-
     // 1. 속성
     private String name;
     private double price;
