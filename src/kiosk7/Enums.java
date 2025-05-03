@@ -1,12 +1,12 @@
 package kiosk7;
 
-public class Enum {
+public class Enums {
 
     public enum Menus {
         BURGERS, DRINKS, DESSERTS
     }
 
-    public enum Type {
+    public enum Discount {
         VETERAN(0.10),   // 국가유공자 10%
         SOLDIER(0.05),   // 군인 5%
         STUDENT(0.03),   // 학생 3%
@@ -14,10 +14,9 @@ public class Enum {
 
         private double rate;
 
-        Type(double rate) {
+        Discount (double rate) {
             this.rate = rate;
         }
-
 
 
         public double getRate() {
