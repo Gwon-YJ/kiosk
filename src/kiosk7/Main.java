@@ -1,4 +1,4 @@
-package kiosk6;
+package kiosk7;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -10,12 +10,10 @@ public class Main {
 
     // 3. 기능
     public static void main(String[] args) {
-
-
         // 각 메뉴 항목을 생성
-        Menu burgerMenu = new Menu("Burgers");
-        Menu drinkMenu = new Menu("Drinks");
-        Menu dessertMenu = new Menu("Desserts");
+        Menu burgerMenu = new Menu("Burgers", Enum.Menus.BURGERS);
+        Menu drinkMenu = new Menu("Drinks", Enum.Menus.DRINKS);
+        Menu dessertMenu = new Menu("Desserts", Enum.Menus.DESSERTS);
 
         // Kiosk에 메뉴 리스트 전달
         List<Menu> menus = new ArrayList<>();

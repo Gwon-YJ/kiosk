@@ -1,4 +1,4 @@
-package kiosk6;
+package kiosk7;
 
 public class CartItem {
 
@@ -25,6 +25,7 @@ public class CartItem {
         return menuItem.getPrice() * quantity;
     }
 
+    // 수량 추가
     public void plus() {
         this.quantity++;
     }

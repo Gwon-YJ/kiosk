@@ -1,4 +1,4 @@
-package kiosk6;
+package kiosk7;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +61,7 @@ public class Kiosk {
         scanner.close();
     }
 
+    //뒤로가기
     public void back(Menu menu) {
 
 
@@ -97,6 +98,7 @@ public class Kiosk {
                 System.out.println("잘못된 번호입니다. 다시 입력해주세요");
             }
 
+            // 장바구니
             MenuItem cart = menu.getMenuMap().get(menu1 - 1);
             System.out.printf("\n\"%s | W %.1f | %s\"\n", cart.getName(), cart.getPrice(), cart.getExplanation());
             System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
@@ -128,6 +130,7 @@ public class Kiosk {
         }
     }
 
+    // order
     public void order() {
         System.out.println("[ Orders ]");
         for (CartItem cartItem : items) {
@@ -163,8 +166,8 @@ public class Kiosk {
         }
     }
 
+    // 청소
     public void clearCart() {
         items.clear();
     }
 }
-
