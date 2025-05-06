@@ -6,7 +6,7 @@ public class MenuItem {
         private String name;
         private double price;
         private String explanation;
-
+        
         // 2. 생성자
         public MenuItem(String name, double price, String explanation) {
             this.name = name;
@@ -22,6 +22,7 @@ public class MenuItem {
         public double getPrice() {
             return price;
         }
+        
         public String getExplanation() {
             return explanation;
         }
