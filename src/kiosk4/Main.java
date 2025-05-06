@@ -35,10 +35,8 @@ public class Main {
         menus.add(new Menu("Drinks", drinks));
         menus.add(new Menu("Desserts", desserts));
         
-        // 키오스크 생성
+        // 키오스크 실행
         Kiosk kiosk = new Kiosk(menus);
-        
-        // 키오스크 
         kiosk.start();
     }
 }
