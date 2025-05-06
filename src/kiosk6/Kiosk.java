@@ -96,6 +96,7 @@ public class Kiosk {
                 System.out.println("잘못된 번호입니다. 다시 입력해주세요");
             }
 
+            // 장바구니 기능 추가가
             MenuItem cart = menu.getMenuMap().get(back1 - 1);
             System.out.printf("\n\"%s | W %.1f | %s\"\n", cart.getName(), cart.getPrice(), cart.getExplanation());
             System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
@@ -166,4 +167,3 @@ public class Kiosk {
         items.clear();
     }
 }
-
