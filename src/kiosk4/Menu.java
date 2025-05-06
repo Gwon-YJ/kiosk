@@ -22,7 +22,8 @@ public class Menu {
     public List<MenuItem> getItems() {
         return items;
     }
-    
+
+    // 메뉴명 수정
     public String getmenuBar() {
         if (menuName.contains("Burgers")) {
             return "BURGERS MENU";
