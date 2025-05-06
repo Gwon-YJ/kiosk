@@ -7,12 +7,12 @@ public class Menu {
     // 1. 속성
     private String name;
     private final Map<Integer, MenuItem> menuMap;
-
+    
     // 2. 생성자
     public Menu(String name) {
         this.name = name;
         this.menuMap = new HashMap<>();
-
+        
         // 메뉴 항목을 Map으로 처리
         switch (name) {
             case "Burgers" -> {
@@ -35,16 +35,16 @@ public class Menu {
             }
         }
     }
-
+    
     // 3. 기능
     public String getName() {
         return name;
     }
-
+    
     public Map<Integer, MenuItem> getMenuMap() {
         return menuMap;
     }
-
+    
     // 메뉴 바 출력
     public String getMenuBar() {
         if (name.equals("Burgers")) {
