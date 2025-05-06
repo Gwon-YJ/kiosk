@@ -57,7 +57,7 @@ public class Kiosk {
         scanner.close();
     }
     
-    // 뒤로 가기 기능 추가
+    // 뒤로가기 기능 추가
     public void back() {
         while (true) {
             System.out.println("[ SHAKESHACK MENU ]");
