@@ -7,17 +7,15 @@ public class Menu {
     // 1. 속성
     private String name;
     private Map<Integer, MenuItem> menuMap;
-    private Enums.Menus lambda;
 
 
     // 2. 생성자
-    public Menu(String name, Enums.Menus lambda) {
+    public Menu(String name, Enums.Menus category) {
         this.name = name;
         this.menuMap = new HashMap<>();
-        this.lambda = lambda;
 
-        // 메뉴 항목을 Map으로 처리 -> 람다식
-        switch (lambda) {
+        // 메뉴 항목을 Map으로 처리
+        switch (category) {
             case BURGERS -> {
                 menuMap.put(0, new MenuItem("ShackBurger", 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거"));
                 menuMap.put(1, new MenuItem("SmokeShack", 8.9, "베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거"));
@@ -43,7 +41,6 @@ public class Menu {
     public String getName() {
         return name;
     }
-
 
     public Map<Integer, MenuItem> getMenuMap() {
         return menuMap;
