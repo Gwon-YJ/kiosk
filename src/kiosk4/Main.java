@@ -10,7 +10,8 @@ public class Main {
 
     // 3. 기능
     public static void main(String[] args) {
-        
+
+        // 메뉴 <햄버거, 음료수, 디저트> 추가
         List<MenuItem> burgers = new ArrayList<>();
         burgers.add(new MenuItem("ShackBurger", 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거"));
         burgers.add(new MenuItem("SmokeShack", 8.9, "베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거"));
@@ -34,7 +35,10 @@ public class Main {
         menus.add(new Menu("Drinks", drinks));
         menus.add(new Menu("Desserts", desserts));
         
+        // 키오스크 생성
         Kiosk kiosk = new Kiosk(menus);
+        
+        // 키오스크 
         kiosk.start();
     }
 }
