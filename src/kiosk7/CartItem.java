@@ -13,14 +13,16 @@ public class CartItem {
     }
 
     // 3. 기능
+    // 메뉴 아이템
     public MenuItem getMenuItem() {
         return menuItem;
     }
-
+    
     public int getQuantity() {
         return quantity;
     }
 
+    // 총 가격 
     public double getTotalPrice() {
         return menuItem.getPrice() * quantity;
     }
