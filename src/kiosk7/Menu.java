@@ -16,7 +16,7 @@ public class Menu {
         this.menuMap = new HashMap<>();
         this.lambda = lambda;
 
-        // 메뉴 항목을 Map으로 처리
+        // 메뉴 항목을 Map으로 처리 -> 람다식
         switch (lambda) {
             case BURGERS -> {
                 menuMap.put(0, new MenuItem("ShackBurger", 6.9, "토마토, 양상추, 쉑소스가 토핑된 치즈버거"));
