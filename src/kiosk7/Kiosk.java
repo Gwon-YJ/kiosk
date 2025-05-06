@@ -171,16 +171,16 @@ public class Kiosk {
         // 할인 적용
         double discountRate = discountCutomer.getRate();
         double discountedPrice = totalPrice * (1 - discountRate);
-
+        
         System.out.println("\n[ Total ]");
         System.out.printf("할인 전: W %.2f\n", totalPrice);
         System.out.printf("%s 할인(%.0f%%) 적용됨: W %.2f\n", discountCutomer, discountRate * 100, discountedPrice);
-
+        
         // 주문할거냐 선택
         System.out.println("1. 주문      2. 메뉴판");
         System.out.print("선택: ");
         int order = scanner.nextInt();
-
+        
         if (order == 1) {
             // 1번 선택시
             System.out.println("주문이 완료되었습니다. 금액은 W " +  discountedPrice  + " 입니다.");
@@ -193,7 +193,7 @@ public class Kiosk {
             System.out.println("잘못된 숫자를 입력하였습니다.");
         }
     }
-
+    
     // 청소
     public void clearCart() {
         items.clear();
