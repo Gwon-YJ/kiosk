@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a186bfc-1c6a-48d1-bdd3-7826365344e4" name="변경" comment="알아보기 싶게 정리">
+      <changelist_data name="Gwon-YJ" email="" automatic="false" />
+      <change beforePath="$PROJECT_DIR$/src/kiosk3/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk3/Kiosk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kiosk4/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk4/Kiosk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kiosk5/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk5/Kiosk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kiosk6/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk6/Kiosk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kiosk7/Enums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk7/Enums.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/kiosk7/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/kiosk7/Kiosk.java" afterDir="false" />
+    </list>
+    <list id="1d97c84a-3321-4b30-9b33-e669261da92c" name="Administrator 님이 변경한 내용" comment="" />
+    <list id="5e48c052-e185-44c1-9a9d-32e92cb71e7b" name="sprtm 님이 변경한 내용" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="main" />
+                <branch-info repo="$PROJECT_DIR$/src" source="main" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Gwon-YJ" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/src" />
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="SIGN_OFF_COMMIT" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Gwon-yong-jun&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Gwon-yong-jun/kiosk.git&quot;,
+    &quot;accountId&quot;: &quot;2115f489-4a3c-4dd5-ba5e-f35d84f1b41c&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2wDUPwpoFfQr1pVr6hntqBDYnAz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/gwonyj/Desktop/sparta-java-coupling&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/gwonyj/Desktop/kiosk/kiosk/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;모듈&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.log&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;애플리케이션.Main.executor&quot;: &quot;Run&quot;,
+    &quot;애플리케이션.kiosk5.Main.executor&quot;: &quot;Run&quot;,
+    &quot;애플리케이션.kiosk6.Main.executor&quot;: &quot;Run&quot;,
+    &quot;애플리케이션.kiosk7.Main.executor&quot;: &quot;Run&quot;
+  }
+}</component>
+  <component name="RunManager" selected="애플리케이션.kiosk6.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kiosk4.Main" />
+      <module name="kiosk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kiosk4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kiosk5.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kiosk5.Main" />
+      <module name="kiosk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kiosk5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kiosk6.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kiosk6.Main" />
+      <module name="kiosk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kiosk6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="kiosk7.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="kiosk7.Main" />
+      <module name="kiosk" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="kiosk7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="애플리케이션.kiosk6.Main" />
+        <item itemvalue="애플리케이션.kiosk7.Main" />
+        <item itemvalue="애플리케이션.kiosk5.Main" />
+        <item itemvalue="애플리케이션.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="1a186bfc-1c6a-48d1-bdd3-7826365344e4" name="변경" comment="" />
+      <created>1745575619764</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1745575619764</updated>
+      <workItem from="1745575620874" duration="388000" />
+      <workItem from="1745576033158" duration="26000" />
+      <workItem from="1745576081475" duration="201000" />
+      <workItem from="1745576297831" duration="247000" />
+      <workItem from="1745576661831" duration="859000" />
+      <workItem from="1745577550254" duration="12000" />
+      <workItem from="1745577818816" duration="8000" />
+      <workItem from="1745578463821" duration="109000" />
+      <workItem from="1745578735852" duration="14000" />
+      <workItem from="1745583944080" duration="307000" />
+      <workItem from="1745584267059" duration="6000" />
+      <workItem from="1745586445877" duration="25000" />
+      <workItem from="1745841435012" duration="46000" />
+      <workItem from="1745883407238" duration="32117000" />
+      <workItem from="1745930547553" duration="270000" />
+      <workItem from="1745975497718" duration="335000" />
+      <workItem from="1745987092354" duration="20358000" />
+      <workItem from="1746009748707" duration="1313000" />
+      <workItem from="1746011649979" duration="539000" />
+      <workItem from="1746014022876" duration="4008000" />
+      <workItem from="1746026932952" duration="510000" />
+      <workItem from="1746056939722" duration="12624000" />
+      <workItem from="1746095922723" duration="9000" />
+      <workItem from="1746100007756" duration="647000" />
+      <workItem from="1746105517924" duration="8000" />
+      <workItem from="1746151330005" duration="170000" />
+      <workItem from="1746233695459" duration="8687000" />
+      <workItem from="1746243401716" duration="48000" />
+      <workItem from="1746243524024" duration="8837000" />
+      <workItem from="1746286775061" duration="14510000" />
+      <workItem from="1746301537523" duration="172000" />
+      <workItem from="1746301729374" duration="79000" />
+      <workItem from="1746489138256" duration="3774000" />
+    </task>
+    <task id="LOCAL-00001" summary="안녕하세요">
+      <option name="closed" value="true" />
+      <created>1745576722023</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1745576722023</updated>
+    </task>
+    <task id="LOCAL-00002" summary="수정">
+      <option name="closed" value="true" />
+      <created>1746008613409</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1746008613409</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Enum 추가 및 전체적인 수정">
+      <option name="closed" value="true" />
+      <created>1746294147742</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746294147742</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Enum 추가 및 전체적인 수정">
+      <option name="closed" value="true" />
+      <created>1746298526616</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746298526616</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="안녕하세요" />
+    <MESSAGE value="수정" />
+    <MESSAGE value="Enum 추가 및 전체적인 수정" />
+    <MESSAGE value="Enum 추가 및 전체적인 수정&#10;&#10;Signed-off-by: 권용준 &lt;yoyo91828h@gmail.com&gt;" />
+    <MESSAGE value="알아보기 싶게 정리" />
+    <option name="LAST_COMMIT_MESSAGE" value="알아보기 싶게 정리" />
+  </component>
+</project>

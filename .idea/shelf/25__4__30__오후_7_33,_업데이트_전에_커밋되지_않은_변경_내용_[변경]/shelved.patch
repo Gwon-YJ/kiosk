@@ -1,0 +1,307 @@
+Index: src/kiosk4/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package kiosk4;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.List;\r\n\r\npublic class Main {\r\n\r\n    public static void main(String[] args) {\r\n\r\n        List<MenuItem> burgers = new ArrayList<>();\r\n        burgers.add(new MenuItem(\"ShackBurger\", 6.9, \"토마토, 양상추, 쉑소스가 토핑된 치즈버거\"));\r\n        burgers.add(new MenuItem(\"SmokeShack\", 8.9, \"베이컨, 체리 페퍼에 쉑소스가 토핑된 치즈버거\"));\r\n        burgers.add(new MenuItem(\"CheeseBurger\", 6.9, \"포테이토 번과 비프패티, 치즈가 토핑된 치즈버거\"));\r\n        burgers.add(new MenuItem(\"Hamburger\", 5.4, \"비프패티를 기반으로 야채가 들어간 기본버거\"));\r\n\r\n        List<MenuItem> drinks = new ArrayList<>();\r\n        drinks.add(new MenuItem(\"Coke\", 2.5, \"콜라\"));\r\n        drinks.add(new MenuItem(\"Lemonade\", 3.0, \"레모네이드\"));\r\n        drinks.add(new MenuItem(\"ChocolateLatte\", 3.4, \"초코렛, 우유의 조합이 어울리는 음료\"));\r\n        drinks.add(new MenuItem(\"OrangeJuice\", 3.2, \"오렌지 주스\"));\r\n\r\n        List<MenuItem> desserts = new ArrayList<>();\r\n        desserts.add(new MenuItem(\"ChocolateCake\", 4.5, \"초콜릿 케이크\"));\r\n        desserts.add(new MenuItem(\"StrawberryCake\", 4.5, \"딸기 케이크\"));\r\n        desserts.add(new MenuItem(\"ApplePie\", 3.7, \"애플파이\"));\r\n        desserts.add(new MenuItem(\"IceCream\", 2.8, \"아이스크림\"));\r\n\r\n        List<Menu> menus = new ArrayList<>();\r\n        menus.add(new Menu(\"Burgers\", burgers));\r\n        menus.add(new Menu(\"Drinks\", drinks));\r\n        menus.add(new Menu(\"Desserts\", desserts));\r\n\r\n        Kiosk kiosk = new Kiosk(menus);\r\n        kiosk.start();\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/kiosk4/Main.java b/src/kiosk4/Main.java
+--- a/src/kiosk4/Main.java	(revision b58467112ea47dcd1b000e891118bed6eca48a5e)
++++ b/src/kiosk4/Main.java	(date 1745988176377)
+@@ -4,7 +4,11 @@
+ import java.util.List;
+ 
+ public class Main {
++    // 1. 속성
+ 
++    // 2. 생성자
++
++    // 3. 기능
+     public static void main(String[] args) {
+ 
+         List<MenuItem> burgers = new ArrayList<>();
+Index: src/kiosk4/Kiosk.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package kiosk4;\r\n\r\nimport java.util.List;\r\nimport java.util.Scanner;\r\n\r\npublic class Kiosk {\r\n    // 1. 속성\r\n    private List<Menu> menus;\r\n    private Scanner scanner;\r\n\r\n    // 2. 생성자\r\n    public Kiosk(List<Menu> menus) {\r\n        this.menus = menus;\r\n        this.scanner = new Scanner(System.in);\r\n    }\r\n\r\n    // 3. 기능\r\n    public void start() {\r\n\r\n        while (true) {\r\n            System.out.println(\"[ MAIN MENU ]\");\r\n            for (int i = 0; i < menus.size(); i++) {\r\n                System.out.println((i + 1) + \". \" + menus.get(i).getMenuName());\r\n            }\r\n            System.out.println(\"0. 종료\");\r\n\r\n            System.out.print(\"메뉴 번호를 선택: \");\r\n            int menustr = scanner.nextInt();\r\n\r\n            if (menustr == 1) {\r\n                back(menus.get(0));\r\n            } else if (menustr == 2) {\r\n                back(menus.get(1));\r\n            } else if (menustr == 3) {\r\n                back(menus.get(2));\r\n            } else if (menustr == 0) {\r\n                System.out.println(\"프로그램을 종료합니다.\");\r\n                break;\r\n            } else {\r\n                System.out.println(\"잘못된 번호입니다. 다시 입력해주세요\");\r\n            }\r\n        }\r\n\r\n        scanner.close();\r\n    }\r\n\r\n    public void back(Menu menu) {\r\n\r\n        while (true) {\r\n            System.out.println(\"[ MAIN MENU ]\");\r\n\r\n            for (int i = 0; i < menu.getItems().size(); i++) {\r\n                MenuItem item = menu.getItems().get(i);\r\n                System.out.printf(\"%d. %-15s | W %-2.1f | %s\\n\",\r\n                        i + 1, item.getName(), item.getPrice(), item.getExplanation());\r\n            }\r\n            System.out.println(\"0. 뒤로 가기\");\r\n\r\n            System.out.print(\"메뉴 번호 선택: \");\r\n            int menu1 = scanner.nextInt();\r\n\r\n            if (menu1 == 1) {\r\n                MenuItem menuItem = menu.getItems().get(0);\r\n                System.out.println(\"1. \" + menuItem.getName() + \"  | W \" + menuItem.getPrice() + \" | \" + menuItem.getExplanation());\r\n            } else if (menu1 == 2) {\r\n                MenuItem menuItem = menu.getItems().get(1);\r\n                System.out.println(\"2. \" + menuItem.getName() + \"  | W \" + menuItem.getPrice() + \" | \" + menuItem.getExplanation());\r\n            } else if (menu1 == 3) {\r\n                MenuItem menuItem = menu.getItems().get(2);\r\n                System.out.println(\"3. \" + menuItem.getName() + \"  | W \" + menuItem.getPrice() + \" | \" + menuItem.getExplanation());\r\n            } else if (menu1 == 4) {\r\n                MenuItem menuItem = menu.getItems().get(3);\r\n                System.out.println(\"4. \" + menuItem.getName() + \"  | W \" + menuItem.getPrice() + \" | \" + menuItem.getExplanation());\r\n            } else if (menu1 == 0) {\r\n                System.out.println(\"프로그램을 종료합니다.\");\r\n                return;\r\n            } else {\r\n                System.out.println(\"잘못된 번호입니다. 다시 입력해주세요\");\r\n            }\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/kiosk4/Kiosk.java b/src/kiosk4/Kiosk.java
+--- a/src/kiosk4/Kiosk.java	(revision b58467112ea47dcd1b000e891118bed6eca48a5e)
++++ b/src/kiosk4/Kiosk.java	(date 1745988176289)
+@@ -22,6 +22,7 @@
+             for (int i = 0; i < menus.size(); i++) {
+                 System.out.println((i + 1) + ". " + menus.get(i).getMenuName());
+             }
++
+             System.out.println("0. 종료");
+ 
+             System.out.print("메뉴 번호를 선택: ");
+@@ -40,20 +41,20 @@
+                 System.out.println("잘못된 번호입니다. 다시 입력해주세요");
+             }
+         }
+-
+         scanner.close();
+     }
+ 
+     public void back(Menu menu) {
+ 
+         while (true) {
+-            System.out.println("[ MAIN MENU ]");
++            System.out.println("[ " + menu.getmenuBar() + " ]");
+ 
+             for (int i = 0; i < menu.getItems().size(); i++) {
+                 MenuItem item = menu.getItems().get(i);
+                 System.out.printf("%d. %-15s | W %-2.1f | %s\n",
+                         i + 1, item.getName(), item.getPrice(), item.getExplanation());
+             }
++
+             System.out.println("0. 뒤로 가기");
+ 
+             System.out.print("메뉴 번호 선택: ");
+Index: src/kiosk4/Menu.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package kiosk4;\r\n\r\nimport java.util.List;\r\n\r\npublic class Menu {\r\n\r\n    // 1. 속성\r\n    private String menuName;\r\n    private List<MenuItem> items;\r\n\r\n    // 2. 생성자\r\n\r\n    public Menu(String menuName, List<MenuItem> items) {\r\n        this.menuName = menuName;\r\n        this.items = items;\r\n    }\r\n    // 3. 기능\r\n    public String getMenuName() {\r\n        return menuName;\r\n    }\r\n\r\n    public List<MenuItem> getItems() {\r\n        return items;\r\n\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/kiosk4/Menu.java b/src/kiosk4/Menu.java
+--- a/src/kiosk4/Menu.java	(revision b58467112ea47dcd1b000e891118bed6eca48a5e)
++++ b/src/kiosk4/Menu.java	(date 1745988176348)
+@@ -9,11 +9,11 @@
+     private List<MenuItem> items;
+ 
+     // 2. 생성자
+-
+     public Menu(String menuName, List<MenuItem> items) {
+         this.menuName = menuName;
+         this.items = items;
+     }
++
+     // 3. 기능
+     public String getMenuName() {
+         return menuName;
+@@ -21,6 +21,17 @@
+ 
+     public List<MenuItem> getItems() {
+         return items;
++    }
+ 
++    public String getmenuBar() {
++        if (menuName.contains("Burgers")) {
++            return "BURGERS MENU";
++        } else if (menuName.contains("Drinks")) {
++            return "DRINK MENU";
++        } else if (menuName.contains("Desserts")) {
++            return "DESSERT MENU";
++        } else {
++            return menuName;
++        }
+     }
+ }
+\ No newline at end of file
+Index: src/kiosk4/MenuItem.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package kiosk4;\r\n\r\npublic class MenuItem {\r\n\r\n    // 1. 속성\r\n    private String name;\r\n    private double price;\r\n    private String explanation;\r\n\r\n    // 2. 생성자\r\n    public MenuItem(String name, double price, String explanation) {\r\n        this.name = name;\r\n        this.price = price;\r\n        this.explanation = explanation;\r\n    }\r\n\r\n    // 3. 기능\r\n    public String getName() {\r\n        return name;\r\n    }\r\n\r\n    public double getPrice() {\r\n        return price;\r\n    }\r\n\r\n    public String getExplanation() {\r\n        return explanation;\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/kiosk4/MenuItem.java b/src/kiosk4/MenuItem.java
+--- a/src/kiosk4/MenuItem.java	(revision b58467112ea47dcd1b000e891118bed6eca48a5e)
++++ b/src/kiosk4/MenuItem.java	(date 1745988176325)
+@@ -1,7 +1,6 @@
+ package kiosk4;
+ 
+ public class MenuItem {
+-
+     // 1. 속성
+     private String name;
+     private double price;
+Index: kiosk.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/kiosk.iml b/kiosk.iml
+new file mode 100644
+--- /dev/null	(date 1745575622325)
++++ b/kiosk.iml	(date 1745575622325)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(date 1745575622254)
++++ b/.idea/.gitignore	(date 1745575622254)
+@@ -0,0 +1,8 @@
++# 디폴트 무시된 파일
++/shelf/
++/workspace.xml
++# 에디터 기반 HTTP 클라이언트 요청
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1745575622364)
++++ b/.idea/vcs.xml	(date 1745575622364)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(date 1745575622344)
++++ b/.idea/misc.xml	(date 1745575622344)
+@@ -0,0 +1,31 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectInspectionProfilesVisibleTreeState">
++    <entry key="Project Default">
++      <profile-state>
++        <expanded-state>
++          <State>
++            <id>Java</id>
++          </State>
++          <State>
++            <id>메모리Java</id>
++          </State>
++          <State>
++            <id>제어 흐름 이슈Java</id>
++          </State>
++          <State>
++            <id>코드 스타일 이슈Java</id>
++          </State>
++        </expanded-state>
++        <selected-state>
++          <State>
++            <id>사용자 정의</id>
++          </State>
++        </selected-state>
++      </profile-state>
++    </entry>
++  </component>
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: src/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main.java b/src/Main.java
+new file mode 100644
+--- /dev/null	(date 1745575618095)
++++ b/src/Main.java	(date 1745575618095)
+@@ -0,0 +1,15 @@
++//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
++// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
++public class Main {
++    public static void main(String[] args) {
++        //TIP 캐럿을 강조 표시된 텍스트에 놓고 <shortcut actionId="ShowIntentionActions"/>을(를) 누르면
++        // IntelliJ IDEA이(가) 수정을 제안하는 것을 확인할 수 있습니다.
++        System.out.printf("Hello and welcome!");
++
++        for (int i = 1; i <= 5; i++) {
++            //TIP <shortcut actionId="Debug"/>을(를) 눌러 코드 디버그를 시작하세요. 1개의 <icon src="AllIcons.Debugger.Db_set_breakpoint"/> 중단점을 설정해 드렸습니다
++            // 언제든 <shortcut actionId="ToggleLineBreakpoint"/>을(를) 눌러 중단점을 더 추가할 수 있습니다.
++            System.out.println("i = " + i);
++        }
++    }
++}
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1745575622329)
++++ b/.idea/modules.xml	(date 1745575622329)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/kiosk.iml" filepath="$PROJECT_DIR$/kiosk.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.gitignore b/.gitignore
+new file mode 100644
+--- /dev/null	(date 1745575618084)
++++ b/.gitignore	(date 1745575618084)
+@@ -0,0 +1,29 @@
++### IntelliJ IDEA ###
++out/
++!**/src/main/**/out/
++!**/src/test/**/out/
++
++### Eclipse ###
++.apt_generated
++.classpath
++.factorypath
++.project
++.settings
++.springBeans
++.sts4-cache
++bin/
++!**/src/main/**/bin/
++!**/src/test/**/bin/
++
++### NetBeans ###
++/nbproject/private/
++/nbbuild/
++/dist/
++/nbdist/
++/.nb-gradle/
++
++### VS Code ###
++.vscode/
++
++### Mac OS ###
++.DS_Store
+\ No newline at end of file
