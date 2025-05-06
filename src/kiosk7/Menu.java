@@ -49,11 +49,6 @@ public class Menu {
         return menuMap;
     }
 
-    public Enums.Menus getlambda() {
-        return lambda;
-    }
-
-
     // 메뉴 바 출력
     public String getMenuBar() {
         if (name.equals("Burgers")) {
