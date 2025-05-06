@@ -13,16 +13,16 @@ public class Menu {
         this.menuName = menuName;
         this.items = items;
     }
-
+    
     // 3. 기능
     public String getMenuName() {
         return menuName;
     }
-
+    
     public List<MenuItem> getItems() {
         return items;
     }
-
+    
     public String getmenuBar() {
         if (menuName.contains("Burgers")) {
             return "BURGERS MENU";
