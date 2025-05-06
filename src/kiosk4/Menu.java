@@ -23,7 +23,7 @@ public class Menu {
         return items;
     }
 
-    // 메뉴명 수정
+    // 메뉴 바 출력
     public String getmenuBar() {
         if (menuName.contains("Burgers")) {
             return "BURGERS MENU";
