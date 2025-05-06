@@ -65,11 +65,12 @@ public class Kiosk {
                 System.out.printf("%d. %-12s | W %-2.1f | %s\n",
                         i + 1, item.getName(), item.getPrice(), item.getExplanation());
             }
+            
             System.out.println("0. 뒤로가기");
-
+            
             System.out.print("메뉴 번호 선택");
             int back = scanner.nextInt();
-
+            
             if (back == 1) {
                 MenuItem menuItem = menuItems.get(0);
                 System.out.println("1. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
