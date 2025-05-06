@@ -21,17 +21,17 @@ public class CartItem {
     public int getQuantity() {
         return quantity;
     }
-
+    
     // 총 가격 
     public double getTotalPrice() {
         return menuItem.getPrice() * quantity;
     }
-
+    
     // 수량 추가
     public void plus() {
         this.quantity++;
     }
-
+    
     @Override
     public String toString() {
         return menuItem.getName() + " | 수량: " + quantity + " | 가격: W " + getTotalPrice();
