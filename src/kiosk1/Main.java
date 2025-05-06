@@ -17,10 +17,10 @@ public class Main {
             System.out.println("4. Hamburger     | W 5.4 | 비프패티를 기반으로 야채가 들어간 기본버거");
             System.out.println("0. 종료");
 
-
+            
             System.out.print("메뉴를 입력하세요: ");
             menu = scanner.nextInt();
-
+            
             if (menu == 1) {
                 System.out.println("1. ShackBurger   | W 6.9 | 토마토, 양상추, 쉑소스가 토핑된 치즈버거");
             } else if (menu == 2) {
@@ -36,7 +36,7 @@ public class Main {
                 System.out.println("잘못된 입력입니다.");
             }
         }
-
+        
         scanner.close();
     }
 }
