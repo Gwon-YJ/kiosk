@@ -9,7 +9,7 @@ public class Enums {
     public enum Menus {
         BURGERS, DRINKS, DESSERTS
     }
-
+    
     public enum Discount {
         VETERAN(0.10),   // 국가유공자 10%
         SOLDIER(0.05),   // 군인 5%
@@ -22,7 +22,7 @@ public class Enums {
             this.rate = rate;
         }
 
-
+        
         public double getRate() {
             return rate;
         }
