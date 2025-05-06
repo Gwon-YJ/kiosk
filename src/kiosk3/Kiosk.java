@@ -27,10 +27,12 @@ public class Kiosk {
             }
             
             System.out.println("0. 종료");
-
+            
+            // 입력
             System.out.println("메뉴 번호를 선택");
             int start = scanner.nextInt();
 
+            // 출력
             if (start == 1) {
                 back();
                 MenuItem menuItem = menuItems.get(0);
@@ -55,7 +57,7 @@ public class Kiosk {
         scanner.close();
     }
     
-    // 뒤로 가기
+    // 뒤로 가기 기능 추가
     public void back() {
         while (true) {
             System.out.println("[ SHAKESHACK MENU ]");
@@ -71,6 +73,7 @@ public class Kiosk {
             System.out.print("메뉴 번호 선택");
             int back = scanner.nextInt();
             
+            // 출력
             if (back == 1) {
                 MenuItem menuItem = menuItems.get(0);
                 System.out.println("1. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
