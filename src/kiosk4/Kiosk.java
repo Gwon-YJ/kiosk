@@ -13,7 +13,7 @@ public class Kiosk {
         this.menus = menus;
         this.scanner = new Scanner(System.in);
     }
-
+    
     // 3. 기능
     public void start() {
 
