@@ -13,7 +13,7 @@ public class Kiosk {
         this.menus = menus;
         this.scanner = new Scanner(System.in);
     }
-    
+
     // 3. 기능
     public void start() {
 
@@ -25,9 +25,11 @@ public class Kiosk {
 
             System.out.println("0. 종료");
 
+            // 입력
             System.out.print("메뉴 번호를 선택: ");
             int start = scanner.nextInt();
-
+            
+            // 출력
             if (start == 1) {
                 back(menus.get(0));
             } else if (start == 2) {
@@ -43,7 +45,8 @@ public class Kiosk {
         }
         scanner.close();
     }
-
+    
+    // 뒤로가기
     public void back(Menu menu) {
 
         while (true) {
@@ -57,9 +60,11 @@ public class Kiosk {
 
             System.out.println("0. 뒤로 가기");
 
+            // 입력
             System.out.print("메뉴 번호 선택: ");
             int back = scanner.nextInt();
-
+            
+            // 출력
             if (back == 1) {
                 MenuItem menuItem = menu.getItems().get(0);
                 System.out.println("1. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
