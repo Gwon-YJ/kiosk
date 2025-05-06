@@ -13,7 +13,7 @@ public class Kiosk {
     public Kiosk(List<MenuItem> menuItems) {
         this.menuItems = menuItems;
     }
-
+    
     // 3. 기능
     public void start() {
 
