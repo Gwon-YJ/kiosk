@@ -37,7 +37,7 @@ public class Menu {
                     break;
             }
         }
-
+    
         // 3. 기능
         public String getName() {
             return name;
