@@ -18,7 +18,7 @@ public class Kiosk {
         this.scanner = new Scanner(System.in);
     }
 
-    // 3. 기능
+    // 3. 기능 
     public void start() {
 
         while (true) {
@@ -27,7 +27,7 @@ public class Kiosk {
             for (int i = 0; i < menus.size(); i++) {
                 System.out.println((i + 1) + ". " + menus.get(i).getName());
             }
-
+            
             if (!items.isEmpty()) {
                 System.out.println("[ ORDER MENU ]");
                 System.out.println("4. Orders       | 장바구니를 확인 후 주문합니다.");
