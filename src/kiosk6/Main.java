@@ -11,7 +11,6 @@ public class Main {
     // 3. 기능
     public static void main(String[] args) {
 
-
         // 각 메뉴 항목을 생성
         Menu burgerMenu = new Menu("Burgers");
         Menu drinkMenu = new Menu("Drinks");
