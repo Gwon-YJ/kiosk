@@ -42,7 +42,7 @@ public class Menu {
         public String getName() {
             return name;
         }
-
+    
         public Map<Integer, MenuItem> getMenuMap() {
             return menuMap;
         }
