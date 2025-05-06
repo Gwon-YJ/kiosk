@@ -58,7 +58,8 @@ public class Kiosk {
         }
         scanner.close();
     }
-
+    
+    // 뒤로가기 기능 추가
     public void back(Menu menu) {
 
         while (true) {
