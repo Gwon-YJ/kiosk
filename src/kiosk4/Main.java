@@ -32,13 +32,13 @@ public class Main {
         desserts.add(new MenuItem("ApplePie", 3.7, "애플파이"));
         desserts.add(new MenuItem("IceCream", 2.8, "아이스크림"));
         
-        // 메뉴 리스트 가져오기
+       // Kiosk에 메뉴 리스트 전달
         List<Menu> menus = new ArrayList<>();
         menus.add(new Menu("Burgers", burgers));
         menus.add(new Menu("Drinks", drinks));
         menus.add(new Menu("Desserts", desserts));
         
-        // 키오스크 실행
+        // Kiosk 실행
         Kiosk kiosk = new Kiosk(menus);
         kiosk.start();
     }
