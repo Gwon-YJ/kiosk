@@ -16,21 +16,7 @@ public class Kiosk {
 
     // 3. 기능
     public void start() {
-        /*
 
-             // 각 메뉴 항목을 생성
-                Menu burgerMenu = new Menu("Burgers");
-                Menu drinkMenu = new Menu("Drinks");
-                Menu dessertMenu = new Menu("Desserts");
-
-                // Kiosk에 메뉴 리스트 전달
-                List<Menu> menus = new ArrayList<>();
-                menus.add(burgerMenu);  0
-                menus.add(drinkMenu);   1
-                menus.add(dessertMenu); 2
-
-
-         */
         while (true) {
             System.out.println("[ MAIN MENU ]");
 
@@ -59,7 +45,6 @@ public class Kiosk {
         scanner.close();
     }
     
-    // 뒤로가기 기능 추가
     public void back(Menu menu) {
 
         while (true) {
