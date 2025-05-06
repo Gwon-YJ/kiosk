@@ -41,15 +41,15 @@ public class Kiosk {
             System.out.println("0. 종료");
 
             System.out.print("메뉴 번호를 선택: ");
-            int menustr = scanner.nextInt();
+            int start = scanner.nextInt();
 
-            if (menustr == 1) {
+            if (start == 1) {
                 back(menus.get(0));
-            } else if (menustr == 2) {
+            } else if (start == 2) {
                 back(menus.get(1));
-            } else if (menustr == 3) {
+            } else if (start == 3) {
                 back(menus.get(2));
-            } else if (menustr == 0) {
+            } else if (start == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
             } else {
@@ -73,21 +73,21 @@ public class Kiosk {
             System.out.println("0. 뒤로 가기");
 
             System.out.print("메뉴 번호 선택: ");
-            int menu1 = scanner.nextInt();
+            int back = scanner.nextInt();
 
-            if (menu1 == 1) {
+            if (back == 1) {
                 MenuItem menuItem = menu.getMenuMap().get(0);
                 System.out.println("1. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu1 == 2) {
+            } else if (back == 2) {
                 MenuItem menuItem = menu.getMenuMap().get(1);
                 System.out.println("2. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu1 == 3) {
+            } else if (back == 3) {
                 MenuItem menuItem = menu.getMenuMap().get(2);
                 System.out.println("3. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu1 == 4) {
+            } else if (back == 4) {
                 MenuItem menuItem = menu.getMenuMap().get(3);
                 System.out.println("4. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu1 == 0) {
+            } else if (back == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 return;
             } else {

@@ -38,19 +38,19 @@ public class Kiosk {
             System.out.println("0. 종료");
 
             System.out.print("메뉴 번호를 선택: ");
-            int menustr = scanner.nextInt();
+            int start = scanner.nextInt();
 
-            if (menustr == 1) {
+            if (start == 1) {
                 back(menus.get(0));     // 메뉴 1번을 불러와라
-            } else if (menustr == 2) {
+            } else if (start == 2) {
                 back(menus.get(1));     // 메뉴 2번을 불러와라
-            } else if (menustr == 3) {
+            } else if (start == 3) {
                 back(menus.get(2));     // 메뉴 3번을 불러와라
-            } else if (menustr == 4 && !items.isEmpty()) {
+            } else if (start == 4 && !items.isEmpty()) {
                 order();    // order
-            } else if (menustr == 5 && !items.isEmpty()) {
+            } else if (start == 5 && !items.isEmpty()) {
                 clearCart(); // clear
-            } else if (menustr == 0) {
+            } else if (start == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
             } else {
@@ -77,21 +77,21 @@ public class Kiosk {
             System.out.println("0. 뒤로 가기");
 
             System.out.print("메뉴 번호 선택: ");
-            int menu1 = scanner.nextInt();
+            int back1 = scanner.nextInt();
 
-            if (menu1 == 1) {
+            if (back1 == 1) {
                 MenuItem menuItem = menu.getMenuMap().get(0);
                 System.out.println("1. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu1 == 2) {
+            } else if (back1 == 2) {
                 MenuItem menuItem = menu.getMenuMap().get(1);
                 System.out.println("2. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu1 == 3) {
+            } else if (back1 == 3) {
                 MenuItem menuItem = menu.getMenuMap().get(2);
                 System.out.println("3. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu1 == 4) {
+            } else if (back1 == 4) {
                 MenuItem menuItem = menu.getMenuMap().get(3);
                 System.out.println("4. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu1 == 0) {
+            } else if (back1 == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 return;
             } else {
@@ -99,15 +99,15 @@ public class Kiosk {
             }
 
             // 장바구니
-            MenuItem cart = menu.getMenuMap().get(menu1 - 1);
+            MenuItem cart = menu.getMenuMap().get(back1 - 1);
             System.out.printf("\n\"%s | W %.1f | %s\"\n", cart.getName(), cart.getPrice(), cart.getExplanation());
             System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
             System.out.println("1. 확인        2. 취소");
             System.out.print("선택: ");
-            int menu2 = scanner.nextInt();
+            int back2 = scanner.nextInt();
 
             // 중복일 때 수량 증가하도록
-            if (menu2 == 1) {
+            if (back2 == 1) {
                 boolean isExist = false;
 
                 for (CartItem cartItem : items) {
@@ -137,9 +137,9 @@ public class Kiosk {
             System.out.println("4. 일반");
 
             System.out.print("번호를 선택하세요: ");
-            int type = scanner.nextInt();
+            int sale = scanner.nextInt();
 
-            return switch (type) {
+            return switch (sale) {
                 case 1 -> Enums.Discount.VETERAN;
                 case 2 -> Enums.Discount.SOLDIER;
                 case 3 -> Enums.Discount.STUDENT;
@@ -178,14 +178,14 @@ public class Kiosk {
         // 주문할거냐 선택
         System.out.println("1. 주문      2. 메뉴판");
         System.out.print("선택: ");
-        int menu3 = scanner.nextInt();
+        int order = scanner.nextInt();
 
-        if (menu3 == 1) {
+        if (order == 1) {
             // 1번 선택시
             System.out.println("주문이 완료되었습니다. 금액은 W " +  discountedPrice  + " 입니다.");
             items.clear();
             // 2번 선택시
-        } else if (menu3 == 2) {
+        } else if (order == 2) {
             System.out.println("메뉴판으로 돌아갑니다.");
             // 다른 번호 선택시
         } else {

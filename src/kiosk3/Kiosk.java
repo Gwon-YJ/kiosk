@@ -28,22 +28,22 @@ public class Kiosk {
             System.out.println("0. 종료");
 
             System.out.println("메뉴 번호를 선택");
-            int menustr = scanner.nextInt();
+            int start = scanner.nextInt();
 
-            if (menustr == 1) {
+            if (start == 1) {
                 back();
                 MenuItem menuItem = menuItems.get(0);
                 System.out.println("1. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menustr == 2) {
+            } else if (start == 2) {
                 MenuItem menuItem = menuItems.get(1);
                 System.out.println("2. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menustr == 3) {
+            } else if (start == 3) {
                 MenuItem menuItem = menuItems.get(2);
                 System.out.println("3. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menustr == 4) {
+            } else if (start == 4) {
                 MenuItem menuItem = menuItems.get(3);
                 System.out.println("4. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menustr == 0) {
+            } else if (start == 0) {
                 System.out.println("프로그램을 종료합니다.");
                 break;
             } else {
@@ -66,21 +66,21 @@ public class Kiosk {
             System.out.println("0. 뒤로가기");
 
             System.out.print("메뉴 번호 선택");
-            int menu = scanner.nextInt();
+            int back = scanner.nextInt();
 
-            if (menu == 1) {
+            if (back == 1) {
                 MenuItem menuItem = menuItems.get(0);
                 System.out.println("1. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu == 2) {
+            } else if (back == 2) {
                 MenuItem menuItem = menuItems.get(1);
                 System.out.println("2. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu == 3) {
+            } else if (back == 3) {
                 MenuItem menuItem = menuItems.get(2);
                 System.out.println("3. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu == 4) {
+            } else if (back == 4) {
                 MenuItem menuItem = menuItems.get(3);
                 System.out.println("4. " + menuItem.getName() + "  | W " + menuItem.getPrice() + " | " + menuItem.getExplanation());
-            } else if (menu == 0) {
+            } else if (back == 0) {
                 System.out.println("처음으로 돌아갑니다.");
                 return;
             } else {
