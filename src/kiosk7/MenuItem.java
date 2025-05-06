@@ -12,16 +12,16 @@ public class MenuItem {
         this.price = price;
         this.explanation = explanation;
     }
-
+    
     // 3. 기능
     public String getName() {
         return name;
     }
-
+    
     public double getPrice() {
         return price;
     }
-
+    
     public String getExplanation() {
         return explanation;
     }
