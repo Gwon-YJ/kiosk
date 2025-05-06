@@ -168,6 +168,7 @@ public class Kiosk {
 
         // 고객 할인 유형 선택
         Enums.Discount discountCutomer = customer();
+        
         // 할인 적용
         double discountRate = discountCutomer.getRate();
         double discountedPrice = totalPrice * (1 - discountRate);
