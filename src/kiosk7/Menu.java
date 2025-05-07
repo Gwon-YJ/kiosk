@@ -10,7 +10,7 @@ public class Menu {
 
 
     // 2. 생성자
-    public Menu(String name, Enums.Menus category) {
+    public Menu(String name, Enums category) {
         this.name = name;
         this.menuMap = new HashMap<>();
 
