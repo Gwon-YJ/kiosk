@@ -129,8 +129,7 @@ public class Kiosk {
             }
         }
     }
-       // 할인 대상자 리스트
-        public Enums.Discount customer() {
+        public Discount customer() {
             System.out.println("\n[고객 유형 선택]");
             System.out.println("1. 국가유공자 (10% 할인)");
             System.out.println("2. 군인 (5% 할인)");
@@ -141,10 +140,10 @@ public class Kiosk {
             int sale = scanner.nextInt();
 
             return switch (sale) {
-                case 1 -> Enums.Discount.VETERAN;
-                case 2 -> Enums.Discount.SOLDIER;
-                case 3 -> Enums.Discount.STUDENT;
-                default -> Enums.Discount.GENERAL;
+                case 1 -> Discount.VETERAN;
+                case 2 -> Discount.SOLDIER;
+                case 3 -> Discount.STUDENT;
+                default -> Discount.GENERAL;
             };
         }
 
@@ -167,21 +166,20 @@ public class Kiosk {
         System.out.printf("W %.1f\n", totalPrice);
 
         // 고객 할인 유형 선택
-        Enums.Discount discountCutomer = customer();
-        
+        Discount discountCutomer = customer();
         // 할인 적용
         double discountRate = discountCutomer.getRate();
         double discountedPrice = totalPrice * (1 - discountRate);
-        
+
         System.out.println("\n[ Total ]");
         System.out.printf("할인 전: W %.2f\n", totalPrice);
         System.out.printf("%s 할인(%.0f%%) 적용됨: W %.2f\n", discountCutomer, discountRate * 100, discountedPrice);
-        
+
         // 주문할거냐 선택
         System.out.println("1. 주문      2. 메뉴판");
         System.out.print("선택: ");
         int order = scanner.nextInt();
-        
+
         if (order == 1) {
             // 1번 선택시
             System.out.println("주문이 완료되었습니다. 금액은 W " +  discountedPrice  + " 입니다.");
@@ -194,7 +192,7 @@ public class Kiosk {
             System.out.println("잘못된 숫자를 입력하였습니다.");
         }
     }
-    
+
     // 청소
     public void clearCart() {
         items.clear();
